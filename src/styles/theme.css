@@ -1,0 +1,13 @@
+:root {
+    --accent: #2337ff;
+    --accent-dark: #000d8a;
+    --black: oklch(0.18 0.0152 266.74);
+    --gray: oklch(0.56 0.0724 266.12);
+    --gray-light: oklch(0.93 0.0104 261.79);
+    --gray-dark: oklch(0.28 0.0313 266.12);
+    --gray-gradient: oklch(from var(--gray-light) l c h / 0.5), #fff;
+    --box-shadow:
+        0 2px 6px oklch(from var(--gray) l c h / 0.25),
+        0 8px 24px oklch(from var(--gray) l c h / 0.33),
+        0 16px 32px oklch(from var(--gray) l c h / 0.33);
+}

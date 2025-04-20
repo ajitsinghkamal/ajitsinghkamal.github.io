@@ -1,0 +1,20 @@
+---
+import type { CollectionEntry } from "astro:content";
+import FormattedDate from "./FormattedDate.astro";
+interface Props {
+    details: CollectionEntry<"work">;
+}
+
+const { details } = Astro.props;
+---
+
+<article>
+    <small><FormattedDate date={details.data.fromDate} /></small>
+    <p>{details.data.title}</p>
+</article>
+
+<style scoped>
+    article {
+        margin-bottom: 1em;
+    }
+</style>

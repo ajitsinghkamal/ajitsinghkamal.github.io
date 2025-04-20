@@ -1,8 +1,14 @@
 ---
 import BaseHead from "../components/BaseHead.astro";
-import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+import { getCollection } from "astro:content";
+import WorkSlice from "../components/WorkSlice.astro";
+
+const workExperiences = await getCollection("work");
+const orderedWorkExperiences = workExperiences.toSorted(
+    (a, b) => b.data.fromDate.getFullYear() - a.data.fromDate.getFullYear(),
+);
 ---
 
 <!doctype html>
@@ -11,10 +17,48 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
         <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
     </head>
     <body>
-        <Header />
         <main>
-            <h1>🧑‍🚀 Hola!</h1>
+            <header>
+                <p class="greeting">Hola,</p>
+                <h1 class="title">I am Ajit.</h1>
+                <p class="prose">
+                    I am a fullstack web developer based out of the beautiful
+                    Madrid
+                </p>
+            </header>
+            <section>
+                <ul>
+                    {
+                        orderedWorkExperiences.map((work) => (
+                            <li>
+                                <WorkSlice details={work} />
+                            </li>
+                        ))
+                    }
+                </ul>
+            </section>
         </main>
         <Footer />
     </body>
 </html>
+
+<style scoped>
+    h1 {
+        font-size: 1em;
+        font-weight: 500;
+    }
+    h1,
+    p {
+        margin-bottom: 0.5em;
+    }
+    main {
+        width: 32ch;
+        max-width: calc(100% - 2em);
+        margin: auto;
+        padding: 40dvh 1em 3em;
+    }
+    .greeting,
+    .title {
+        display: inline-block;
+    }
+</style>
