@@ -1,14 +1,6 @@
 ---
 import BaseHead from "../components/BaseHead.astro";
-import Footer from "../components/Footer.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
-import { getCollection } from "astro:content";
-import WorkSlice from "../components/WorkSlice.astro";
-
-const workExperiences = await getCollection("work");
-const orderedWorkExperiences = workExperiences.toSorted(
-    (a, b) => b.data.fromDate.getFullYear() - a.data.fromDate.getFullYear(),
-);
 ---
 
 <!doctype html>
@@ -21,24 +13,21 @@ const orderedWorkExperiences = workExperiences.toSorted(
             <header>
                 <p class="greeting">Hola,</p>
                 <h1 class="title">I am Ajit.</h1>
-                <p class="prose">
-                    I am a fullstack web developer based out of the beautiful
-                    Madrid
-                </p>
             </header>
             <section>
-                <ul>
-                    {
-                        orderedWorkExperiences.map((work) => (
-                            <li>
-                                <WorkSlice details={work} />
-                            </li>
-                        ))
-                    }
-                </ul>
+                <p class="prose">
+                    I am a fullstack web developer based in the beautiful city
+                    of Madrid. I spend my days turning ideas into smooth, useful
+                    web experiences. I started out in frontend, moved into
+                    fullstack, and love working on products that actually help
+                    people.
+                </p>
+                <p class="prose">
+                    When I'm not coding, you'll find me sketching, hunting down
+                    great food, or exploring somewhere new.
+                </p>
             </section>
         </main>
-        <Footer />
     </body>
 </html>
 
@@ -52,10 +41,14 @@ const orderedWorkExperiences = workExperiences.toSorted(
         margin-bottom: 0.5em;
     }
     main {
-        width: 32ch;
+        width: 42ch;
         max-width: calc(100% - 2em);
         margin: auto;
-        padding: 40dvh 1em 3em;
+        padding: 1em;
+        height: 100dvh;
+        display: flex;
+        justify-content: center;
+        flex-flow: column;
     }
     .greeting,
     .title {
