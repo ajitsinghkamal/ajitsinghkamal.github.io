@@ -1,0 +1,41 @@
+---
+import { getCollection } from "astro:content";
+
+const links = await getCollection("nav");
+if (!links) {
+    throw new Error("Could not find navs in content");
+}
+---
+
+<nav class="navbar">
+    <a class="navbar__home">About</a>
+    {
+        links?.map(({ data }) => (
+            <a class="navbar__link" target="_blank" href={data.url}>
+                {data.text}
+            </a>
+        )) ?? []
+    }
+</nav>
+
+<style scoped>
+    .navbar {
+        display: flex;
+        gap: 1em;
+        place-items: center;
+    }
+    .navbar__home {
+        color: var(--black);
+        text-decoration: underline;
+    }
+    .navbar__link {
+        cursor: pointer;
+        color: var(--gray);
+        transition: color 0.3s;
+    }
+    @media (hover: hover) {
+        .navbar__link:hover {
+            color: var(--black);
+        }
+    }
+</style>

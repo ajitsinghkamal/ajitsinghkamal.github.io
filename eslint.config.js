@@ -34,5 +34,18 @@ export default tseslint.config(
                 "tsconfigRootDir": import.meta.dirname
             }
         }
+    },
+    {
+        "rules": {
+            "object-curly-newline": [
+                "error",
+                {
+                    "ObjectExpression": "always",
+                    "ObjectPattern": {
+                        "multiline": true
+                    }
+                }
+            ]
+        }
     }
 );

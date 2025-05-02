@@ -7,11 +7,10 @@ body {
     margin: 0;
     padding: 0;
     text-align: left;
-    background: linear-gradient(var(--gray-gradient)) no-repeat;
     background-size: 100% 600px;
     word-wrap: break-word;
     overflow-wrap: break-word;
     color: rgb(var(--gray-dark));
-    font-size: 1.25rem;
+    font-size: 1rem;
     line-height: 1.7;
 }

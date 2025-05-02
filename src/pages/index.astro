@@ -4,6 +4,8 @@ import Background from "../components/Background.astro";
 import BaseHead from "../components/BaseHead.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 import me from "../images/pic.jpg";
+import Gallery from "../components/Gallery.astro";
+import Socials from "../components/Socials.astro";
 ---
 
 <!doctype html>
@@ -13,27 +15,30 @@ import me from "../images/pic.jpg";
     </head>
     <body>
         <Background>
-            <main>
-                <header>
-                    <div class="hero">
-                        <Image src={me} alt="image of Ajit" class="pic" />
+            <main class="portfolio">
+                <Socials class="portfolio__social" />
+                <section class="portfolio__content">
+                    <header>
+                        <div class="frame">
+                            <Image src={me} alt="image of Ajit" class="pic" />
+                        </div>
+                        <h1 class="title">Hola, I am Ajit 👋</h1>
+                    </header>
+                    <article>
+                        <p class="prose">
+                            I am a fullstack web developer based in the
+                            beautiful city of Madrid. I spend my days turning
+                            ideas into smooth, useful web experiences. With a
+                            background in frontend, I’ve grown into full-stack
+                            development and found a real passion for building
+                            unique, challenging products that make a meaningful
+                            impact.
+                        </p>
+                    </article>
+                    <div class="gallery">
+                        <Gallery />
                     </div>
-                    <p class="greeting">Hola,</p>
-                    <h1 class="title">I am Ajit.</h1>
-                </header>
-                <article>
-                    <p class="prose">
-                        I am a fullstack web developer based in the beautiful
-                        city of Madrid. I spend my days turning ideas into
-                        smooth, useful web experiences. I started out in
-                        frontend, moved into fullstack, and love working on
-                        products that actually help people.
-                    </p>
-                    <p class="prose">
-                        When I'm not coding, you'll find me sketching, hunting
-                        down great food, or exploring somewhere new.
-                    </p>
-                </article>
+                </section>
             </main>
         </Background>
     </body>
@@ -41,34 +46,35 @@ import me from "../images/pic.jpg";
 
 <style scoped>
     h1 {
-        font-size: 1em;
         font-weight: 500;
+        margin-bottom: 0.5em;
+        font-size: clamp(1rem, 1rem + 0.33dvw, 1.5rem);
     }
-    h1,
     p {
         margin-bottom: 0.5em;
+        font-size: clamp(0.8rem, 0.8rem + 0.33dvw, 1.2rem);
     }
-    main {
-        width: 42ch;
-        max-width: calc(100% - 2em);
+    .portfolio {
+        width: 50ch;
+        max-width: calc(100% - 5em);
         margin: auto;
-        padding: 1em;
+        padding: 2em;
         height: 100%;
-        display: flex;
-        justify-content: center;
-        flex-flow: column;
+        display: grid;
+        grid-template-rows: auto 1fr;
+        gap: 1em;
     }
-    .greeting,
-    .title {
-        display: inline-block;
+    .portfolio__content {
+        align-self: center;
     }
-    .hero {
-        margin-bottom: 0.5em;
+    .frame {
+        margin-bottom: 1em;
     }
-    .hero .pic {
-        min-height: 50px;
-        height: 15dvh;
-        max-height: 150px;
+    .frame .pic {
+        height: clamp(30px, 10dvh, 80px);
         width: auto;
+    }
+    .gallery {
+        margin: 3em 0 1em;
     }
 </style>
