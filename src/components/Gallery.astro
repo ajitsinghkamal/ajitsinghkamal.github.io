@@ -1,7 +1,6 @@
 ---
 import { getCollection } from "astro:content";
 import Tile from "./Tile.astro";
-import { date } from "astro:schema";
 const pens = await getCollection("gallery");
 if (!pens) {
     throw new Error("Could not find gallery content");
