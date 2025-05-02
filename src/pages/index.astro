@@ -1,6 +1,9 @@
 ---
+import Image from "astro/components/Image.astro";
+import Background from "../components/Background.astro";
 import BaseHead from "../components/BaseHead.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+import me from "../images/pic.jpg";
 ---
 
 <!doctype html>
@@ -9,25 +12,30 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
         <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
     </head>
     <body>
-        <main>
-            <header>
-                <p class="greeting">Hola,</p>
-                <h1 class="title">I am Ajit.</h1>
-            </header>
-            <section>
-                <p class="prose">
-                    I am a fullstack web developer based in the beautiful city
-                    of Madrid. I spend my days turning ideas into smooth, useful
-                    web experiences. I started out in frontend, moved into
-                    fullstack, and love working on products that actually help
-                    people.
-                </p>
-                <p class="prose">
-                    When I'm not coding, you'll find me sketching, hunting down
-                    great food, or exploring somewhere new.
-                </p>
-            </section>
-        </main>
+        <Background>
+            <main>
+                <header>
+                    <div class="hero">
+                        <Image src={me} alt="image of Ajit" class="pic" />
+                    </div>
+                    <p class="greeting">Hola,</p>
+                    <h1 class="title">I am Ajit.</h1>
+                </header>
+                <article>
+                    <p class="prose">
+                        I am a fullstack web developer based in the beautiful
+                        city of Madrid. I spend my days turning ideas into
+                        smooth, useful web experiences. I started out in
+                        frontend, moved into fullstack, and love working on
+                        products that actually help people.
+                    </p>
+                    <p class="prose">
+                        When I'm not coding, you'll find me sketching, hunting
+                        down great food, or exploring somewhere new.
+                    </p>
+                </article>
+            </main>
+        </Background>
     </body>
 </html>
 
@@ -45,7 +53,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
         max-width: calc(100% - 2em);
         margin: auto;
         padding: 1em;
-        height: 100dvh;
+        height: 100%;
         display: flex;
         justify-content: center;
         flex-flow: column;
@@ -53,5 +61,14 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
     .greeting,
     .title {
         display: inline-block;
+    }
+    .hero {
+        margin-bottom: 0.5em;
+    }
+    .hero .pic {
+        min-height: 50px;
+        height: 15dvh;
+        max-height: 150px;
+        width: auto;
     }
 </style>
