@@ -3,14 +3,14 @@
         {
             "id": "item__1",
             "image": "../../images/mooncake.png",
-            "alt": "Mooncake in pure CSS.",
+            "alt": "Screenshot of codepen showing mooncake floating",
             "description": "Mooncake in pure CSS.",
             "link": "https://codepen.io/AjitsinghKamal/pen/bjYMmX"
         },
         {
             "id": "item__2",
             "image": "../../images/vue.png",
-            "alt": "Mooncake in pure CSS.",
+            "alt": "Screenshot of codepen showing collection of membrillos",
             "size": "2x",
             "description": "A guide I wrote for mentoring Vue.js",
             "link": "https://graceful-brace-224.notion.site/Vue-component-lifecycle-95ecf92afe2c4349bf87af25add57780"
@@ -18,7 +18,7 @@
         {
             "id": "item__3",
             "image": "../../images/ww.png",
-            "alt": "Mooncake in pure CSS.",
+            "alt": "Screenshot of codepen of Wonder woman",
             "description": "Wonder Woman in pure CSS.",
             "link": "https://codepen.io/AjitsinghKamal/pen/EXoaNJ"
         }
