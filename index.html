@@ -1,0 +1,357 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ajit Singh Kamal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600&display=block"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <button
+      class="theme-toggle"
+      id="theme-toggle"
+      aria-label="Switch to dark theme"
+    >
+      dark
+    </button>
+
+    <main>
+      <div
+        class="card"
+        data-card
+        data-start-x="50%"
+        data-start-y="50%"
+        role="button"
+        tabindex="0"
+        aria-label="About card — press Enter to flip"
+      >
+        <div class="card__inner">
+          <div class="card__face card__front card__front--note">
+            <h1 class="card__name">Ajit Singh Kamal</h1>
+            <p class="card__tagline">fullstack dev in madrid</p>
+            <p class="card__description">
+              I build things for the web — focused on craft, clarity, and
+              products worth making.
+            </p>
+            <span class="card__flip-hint">Click or press Enter to flip</span>
+          </div>
+          <div class="card__face card__back">
+            <nav aria-label="Social links">
+              <a
+                class="card__link"
+                href="https://github.com/ajitsinghkamal"
+                target="_blank"
+                rel="noopener noreferrer"
+                >github<span class="sr-only"> (opens in new tab)</span></a
+              >
+              <a
+                class="card__link"
+                href="https://linkedin.com/in/ajitsinghkamal"
+                target="_blank"
+                rel="noopener noreferrer"
+                >linkedin<span class="sr-only"> (opens in new tab)</span></a
+              >
+              <a
+                class="card__link"
+                href="https://codepen.io/ajitsinghkamal"
+                target="_blank"
+                rel="noopener noreferrer"
+                >codepen<span class="sr-only"> (opens in new tab)</span></a
+              >
+              <a
+                class="card__link"
+                href="https://stackoverflow.com/users/6517778/slumbergeist"
+                target="_blank"
+                rel="noopener noreferrer"
+                >stackoverflow<span class="sr-only"> (opens in new tab)</span></a
+              >
+              <a class="card__link" href="mailto:ajitsinghkamal@gmail.com"
+                >say hello</a
+              >
+            </nav>
+            <span class="card__flip-hint">press Enter to flip back</span>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="card card--photo"
+        data-card
+        data-start-x="38%"
+        data-start-y="28%"
+        data-rotate="5"
+        data-no-flip
+        role="img"
+        aria-label="Photo of Ajit Singh Kamal"
+      >
+        <div class="card__inner">
+          <div class="card__face card__front">
+            <img
+              class="card__photo-img"
+              src="./images/profile-pic.jpeg"
+              alt="Ajit Singh Kamal"
+              width="375"
+              height="380"
+
+            />
+            <span class="card__photo-caption">that's me</span>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="card card--art card--img"
+        data-card
+        data-start-x="18%"
+        data-start-y="25%"
+        data-rotate="-4"
+        role="button"
+        tabindex="0"
+        aria-label="Mooncake CSS art — press Enter to flip"
+      >
+        <div class="card__inner">
+          <div class="card__face card__front card__img-front">
+            <img
+              class="card__img"
+              src="./images/mooncake.png"
+              alt="Mooncake CSS art"
+              width="539"
+              height="380"
+
+            />
+            <span class="card__img-caption">CSS Mooncake</span>
+          </div>
+          <div class="card__face card__back">
+            <a
+              class="card__art-link"
+              href="https://codepen.io/ajitsinghkamal/pen/GRpXVGd"
+              target="_blank"
+              rel="noopener noreferrer"
+              >view on codepen<span class="sr-only">
+                (opens in new tab)</span
+              ></a
+            >
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="card card--art card--img"
+        data-card
+        data-start-x="78%"
+        data-start-y="60%"
+        data-rotate="-1"
+        role="button"
+        tabindex="0"
+        aria-label="Wonder Woman CSS art — press Enter to flip"
+      >
+        <div class="card__inner">
+          <div class="card__face card__front card__img-front">
+            <img
+              class="card__img"
+              src="./images/ww.png"
+              alt="Wonder Woman CSS art"
+              width="471"
+              height="380"
+
+            />
+            <span class="card__img-caption">CSS Wonder Woman</span>
+          </div>
+          <div class="card__face card__back">
+            <a
+              class="card__art-link"
+              href="https://codepen.io/ajitsinghkamal/pen/QWjqEBz"
+              target="_blank"
+              rel="noopener noreferrer"
+              >view on codepen<span class="sr-only">
+                (opens in new tab)</span
+              ></a
+            >
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="card card--art card--img"
+        data-card
+        data-start-x="25%"
+        data-start-y="72%"
+        data-rotate="2"
+        role="button"
+        tabindex="0"
+        aria-label="Vue.js Guide mentoring — press Enter to flip"
+      >
+        <div class="card__inner">
+          <div class="card__face card__front card__img-front">
+            <img
+              class="card__img"
+              src="./images/vue.png"
+              alt="Vue.js component lifecycle guide"
+              width="408"
+              height="380"
+
+            />
+            <span class="card__img-caption">Vue.js Guide</span>
+          </div>
+          <div class="card__face card__back">
+            <a
+              class="card__art-link"
+              href="https://www.notion.so/ajitsinghkamal/Vue-Component-Lifecycle-Guide"
+              target="_blank"
+              rel="noopener noreferrer"
+              >read on notion<span class="sr-only"> (opens in new tab)</span></a
+            >
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      const toggle = document.getElementById("theme-toggle");
+      const root = document.documentElement;
+
+      function getSystemTheme() {
+        return window.matchMedia("(prefers-color-scheme: dark)").matches
+          ? "dark"
+          : "light";
+      }
+
+      function applyTheme(theme) {
+        if (theme === "system") {
+          root.removeAttribute("data-theme");
+          const effective = getSystemTheme();
+          toggle.textContent = effective === "dark" ? "light" : "dark";
+          toggle.setAttribute(
+            "aria-label",
+            `Switch to ${effective === "dark" ? "light" : "dark"} theme`,
+          );
+        } else {
+          root.setAttribute("data-theme", theme);
+          toggle.textContent = theme === "dark" ? "light" : "dark";
+          toggle.setAttribute(
+            "aria-label",
+            `Switch to ${theme === "dark" ? "light" : "dark"} theme`,
+          );
+        }
+      }
+
+      function currentEffectiveTheme() {
+        const attr = root.getAttribute("data-theme");
+        if (attr) return attr;
+        return getSystemTheme();
+      }
+
+      const saved = localStorage.getItem("theme");
+      if (saved) {
+        applyTheme(saved);
+      } else {
+        applyTheme("system");
+      }
+
+      toggle.addEventListener("click", () => {
+        const next = currentEffectiveTheme() === "dark" ? "light" : "dark";
+        localStorage.setItem("theme", next);
+        applyTheme(next);
+      });
+
+      window
+        .matchMedia("(prefers-color-scheme: dark)")
+        .addEventListener("change", () => {
+          if (!localStorage.getItem("theme")) applyTheme("system");
+        });
+
+      // card drag & flip
+      const cards = document.querySelectorAll("[data-card]");
+      let topZ = 1;
+      const mobileQuery = window.matchMedia("(max-width: 900px)");
+
+      cards.forEach((container) => {
+        const inner = container.querySelector(".card__inner");
+        const rotate = container.dataset.rotate || "0";
+        let isDragging = false;
+        let hasMoved = false;
+        let startX, startY, startLeft, startTop;
+
+        // initial position (desktop only)
+        function positionCard() {
+          if (mobileQuery.matches) {
+            container.style.left = "";
+            container.style.top = "";
+            container.style.transform = "";
+            return;
+          }
+          const xPct = parseFloat(container.dataset.startX);
+          const yPct = parseFloat(container.dataset.startY);
+          container.style.left = (window.innerWidth * xPct) / 100 + "px";
+          container.style.top = (window.innerHeight * yPct) / 100 + "px";
+          container.style.transform = `translate(-50%, -50%) rotate(${rotate}deg)`;
+        }
+        positionCard();
+        window.addEventListener("resize", positionCard);
+
+        function onPointerMove(e) {
+          const dx = e.clientX - startX;
+          const dy = e.clientY - startY;
+          if (Math.abs(dx) > 3 || Math.abs(dy) > 3) hasMoved = true;
+          container.style.left = startLeft + dx + "px";
+          container.style.top = startTop + dy + "px";
+        }
+
+        container.addEventListener("pointerdown", (e) => {
+          if (mobileQuery.matches) return;
+          if (e.target.closest("a")) return;
+          isDragging = true;
+          hasMoved = false;
+
+          // bring to front
+          topZ++;
+          container.style.zIndex = topZ;
+          container.classList.add("card--dragging");
+
+          const rect = container.getBoundingClientRect();
+          const cx = rect.left + rect.width / 2;
+          const cy = rect.top + rect.height / 2;
+          container.style.left = cx + "px";
+          container.style.top = cy + "px";
+          container.style.transform = `translate(-50%, -50%) rotate(${rotate}deg)`;
+
+          startX = e.clientX;
+          startY = e.clientY;
+          startLeft = cx;
+          startTop = cy;
+
+          container.setPointerCapture(e.pointerId);
+          window.addEventListener("pointermove", onPointerMove);
+        });
+
+        container.addEventListener("pointerup", () => {
+          if (!isDragging) return;
+          isDragging = false;
+          container.classList.remove("card--dragging");
+          window.removeEventListener("pointermove", onPointerMove);
+        });
+
+        container.addEventListener("click", (e) => {
+          if (hasMoved) return;
+          if (e.target.closest("a")) return;
+          if (container.hasAttribute("data-no-flip")) return;
+          inner.classList.toggle("card__inner--flipped");
+        });
+
+        container.addEventListener("keydown", (e) => {
+          if (e.key === "Enter") {
+            if (container.hasAttribute("data-no-flip")) return;
+            e.preventDefault();
+            inner.classList.toggle("card__inner--flipped");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
