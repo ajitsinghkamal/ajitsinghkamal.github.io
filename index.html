@@ -285,7 +285,7 @@
           if (mobileQuery.matches) {
             container.style.left = "";
             container.style.top = "";
-            container.style.transform = "";
+            container.style.transform = `rotate(${rotate}deg)`;
             return;
           }
           const xPct = parseFloat(container.dataset.startX);

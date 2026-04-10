@@ -347,36 +347,48 @@ body {
   }
 
   main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: clamp(16px, 3vw, 24px);
-    padding: clamp(24px, 5vw, 40px) clamp(12px, 3vw, 24px) 80px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px 10px;
+    padding: clamp(24px, 5vw, 40px) clamp(12px, 3vw, 20px) 80px;
+    max-width: 400px;
+    margin: 0 auto;
   }
 
   .card {
-    position: static;
-    transform: none;
+    position: relative;
     cursor: default;
+    justify-self: center;
   }
 
   .card--dragging {
     cursor: default;
   }
 
+  /* intro card spans full width */
+  .card:first-child {
+    grid-column: 1 / -1;
+    justify-self: center;
+  }
+
+  /* stagger rows with slight vertical offsets */
+  .card:nth-child(even) {
+    margin-top: 14px;
+  }
+
   .card__inner {
-    width: min(420px, calc(100vw - 32px));
-    aspect-ratio: 420 / 260;
+    width: min(300px, calc(100vw - 48px));
+    aspect-ratio: 420 / 280;
   }
 
   .card--art .card__inner {
-    width: min(320px, calc(100vw - 32px));
+    width: min(160px, 42vw);
     aspect-ratio: 280 / 200;
   }
 
   .card--photo .card__inner,
   .card--img .card__inner {
-    width: min(160px, 40vw);
+    width: min(150px, 42vw);
     aspect-ratio: 160 / 190;
   }
 }
