@@ -272,6 +272,7 @@
       const cards = document.querySelectorAll("[data-card]");
       let topZ = 1;
       const mobileQuery = window.matchMedia("(max-width: 900px)");
+      const positionFns = [];
 
       cards.forEach((container) => {
         const inner = container.querySelector(".card__inner");
@@ -280,7 +281,6 @@
         let hasMoved = false;
         let startX, startY, startLeft, startTop;
 
-        // initial position (desktop only)
         function positionCard() {
           if (mobileQuery.matches) {
             container.style.left = "";
@@ -295,7 +295,14 @@
           container.style.transform = `translate(-50%, -50%) rotate(${rotate}deg)`;
         }
         positionCard();
-        window.addEventListener("resize", positionCard);
+        positionFns.push(positionCard);
+
+        function stopDrag() {
+          if (!isDragging) return;
+          isDragging = false;
+          container.classList.remove("card--dragging");
+          window.removeEventListener("pointermove", onPointerMove);
+        }
 
         function onPointerMove(e) {
           const dx = e.clientX - startX;
@@ -332,12 +339,8 @@
           window.addEventListener("pointermove", onPointerMove);
         });
 
-        container.addEventListener("pointerup", () => {
-          if (!isDragging) return;
-          isDragging = false;
-          container.classList.remove("card--dragging");
-          window.removeEventListener("pointermove", onPointerMove);
-        });
+        container.addEventListener("pointerup", stopDrag);
+        container.addEventListener("lostpointercapture", stopDrag);
 
         container.addEventListener("click", (e) => {
           if (hasMoved) return;
@@ -353,6 +356,10 @@
             inner.classList.toggle("card__inner--flipped");
           }
         });
+      });
+
+      window.addEventListener("resize", () => {
+        for (const fn of positionFns) fn();
       });
     </script>
   </body>
