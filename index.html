@@ -15,15 +15,25 @@
             href="./images/favicon-32.png"
         />
         <link rel="apple-touch-icon" href="./images/apple-touch-icon.png" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Freeman&family=Figtree:ital,wght@0,300..900;1,300..900&display=swap"
+            rel="stylesheet"
+        />
         <title>Ajit Singh Kamal — Developer</title>
         <link rel="stylesheet" href="./styles.css" />
         <script src="./script.js" defer></script>
     </head>
     <body>
         <main class="stage">
-            <div class="card-hover-area" data-holo-stage>
-                <article class="profile-card" data-holo-card>
-                    <header class="card-header">
+            <div class="card-stage" data-tilt-stage>
+                <article
+                    class="profile-card"
+                    data-tilt-card
+                    aria-label="Ajit Singh Kamal profile card"
+                >
+                    <header class="card-header card-content">
                         <div class="card-identity">
                             <p class="card-kicker">FULLSTACK</p>
                             <h1>Ajit Singh Kamal</h1>
@@ -44,141 +54,73 @@
                             width="375"
                             height="380"
                         />
-                        <span class="portrait-location">Madrid, Spain</span>
-                        <section
-                            class="card-attack"
-                            aria-labelledby="attack-name"
-                        >
-                            <div class="attack-heading">
-                                <div>
-                                    <h2 id="attack-name">
-                                        Craft &amp; Clarity
-                                    </h2>
-                                </div>
-                            </div>
-                            <p class="attack-description">
-                                Turns complex ideas into clear web experiences.
-                            </p>
-                        </section>
                     </div>
 
-                    <div class="profile-content">
-                        <dl class="card-facts">
-                            <div>
-                                <dt>Weakness</dt>
-                                <dd>Good Chai</dd>
-                            </div>
-                            <div>
-                                <dt>Previously</dt>
-                                <dd>Glovo Ads</dd>
-                            </div>
-                        </dl>
-
-                        <p class="profile-intro">
-                            I like working with thoughtful teams on products
-                            that matter.
+                    <section
+                        class="profile-statement"
+                        aria-labelledby="profile-statement-title"
+                    >
+                        <h2
+                            class="profile-statement-heading"
+                            id="profile-statement-title"
+                        >
+                            Craft &amp; Clarity
+                        </h2>
+                        <p class="profile-statement-description">
+                            Turns complex ideas into clear web experiences.
                         </p>
+                    </section>
 
-                        <nav
-                            class="profile-links"
-                            aria-label="Contact and work links"
-                        >
-                            <a href="mailto:ajitsinghkamal@gmail.com">
-                                Email
-                                <span aria-hidden="true"
-                                    ><svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        fill="none"
-                                        viewBox="0 0 24 24"
-                                        stroke-width="1.5"
-                                        stroke="currentColor"
-                                        class="size-6"
-                                    >
-                                        <path
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                            d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25"
-                                        />
-                                    </svg>
-                                </span>
-                            </a>
-                            <a
-                                href="https://github.com/ajitsinghkamal"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                GitHub
-                                <span aria-hidden="true"
-                                    ><svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        fill="none"
-                                        viewBox="0 0 24 24"
-                                        stroke-width="1.5"
-                                        stroke="currentColor"
-                                        class="size-6"
-                                    >
-                                        <path
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                            d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25"
-                                        />
-                                    </svg>
-                                </span>
-                            </a>
-                            <a
-                                href="https://linkedin.com/in/ajitsinghkamal"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                LinkedIn
-                                <span aria-hidden="true"
-                                    ><svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        fill="none"
-                                        viewBox="0 0 24 24"
-                                        stroke-width="1.5"
-                                        stroke="currentColor"
-                                        class="size-6"
-                                    >
-                                        <path
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                            d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25"
-                                        />
-                                    </svg>
-                                </span>
-                            </a>
-                            <a
-                                href="https://codepen.io/ajitsinghkamal"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                CodePen
-                                <span aria-hidden="true"
-                                    ><svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        fill="none"
-                                        viewBox="0 0 24 24"
-                                        stroke-width="1.5"
-                                        stroke="currentColor"
-                                        class="size-6"
-                                    >
-                                        <path
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                            d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25"
-                                        />
-                                    </svg>
-                                </span>
-                            </a>
-                        </nav>
-                    </div>
-                    <div class="card-holo" aria-hidden="true">
-                        <div class="holo-pattern">
-                            <div class="refraction"></div>
-                            <div class="refraction"></div>
+                    <dl class="card-facts card-content">
+                        <div>
+                            <dt>Focus</dt>
+                            <dd>AI</dd>
                         </div>
-                    </div>
+                        <div>
+                            <dt>Weakness</dt>
+                            <dd>Chai</dd>
+                        </div>
+                        <div>
+                            <dt>Based</dt>
+                            <dd>Madrid</dd>
+                        </div>
+                    </dl>
+
+                    <p class="profile-intro card-content">
+                        I like working with thoughtful teams on products that
+                        matter.
+                    </p>
+
+                    <nav
+                        class="profile-links card-content"
+                        aria-label="Contact and work links"
+                    >
+                        <a href="mailto:ajitsinghkamal@gmail.com" tabindex="0">Email</a>
+                        <a
+                            href="https://github.com/ajitsinghkamal"
+                            tabindex="0"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            GitHub
+                        </a>
+                        <a
+                            href="https://linkedin.com/in/ajitsinghkamal"
+                            tabindex="0"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            LinkedIn
+                        </a>
+                        <a
+                            href="https://codepen.io/ajitsinghkamal"
+                            tabindex="0"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            CodePen
+                        </a>
+                    </nav>
                 </article>
             </div>
         </main>
