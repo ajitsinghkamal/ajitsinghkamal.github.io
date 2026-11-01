@@ -4,7 +4,6 @@ const hoverArea = document.querySelector("[data-tilt-stage]");
 if (
     card &&
     hoverArea &&
-    window.matchMedia("(pointer: fine)").matches &&
     !window.matchMedia("(prefers-reduced-motion: reduce)").matches
 ) {
     let bounds;
@@ -33,12 +32,15 @@ if (
         });
     });
 
-    hoverArea.addEventListener("pointerleave", () => {
+    const resetTilt = () => {
         bounds = null;
         if (frame) cancelAnimationFrame(frame);
         frame = null;
         card.classList.remove("is-tilting");
         card.style.setProperty("--tilt-x", "0deg");
         card.style.setProperty("--tilt-y", "0deg");
-    });
+    };
+
+    hoverArea.addEventListener("pointerleave", resetTilt);
+    hoverArea.addEventListener("pointercancel", resetTilt);
 }

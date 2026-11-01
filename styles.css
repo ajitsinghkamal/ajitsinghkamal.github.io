@@ -87,6 +87,7 @@ a:focus-visible {
     width: min(100%, 22rem);
     height: 34rem;
     aspect-ratio: 11 / 17;
+    touch-action: pan-y;
 }
 
 .profile-card {
